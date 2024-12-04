@@ -1,0 +1,31 @@
+Boshlang/'ich sozlamalar
+1. gitinore sozlash
+2. venv yaratish va aktivatsiya qilish
+3. django o'rnatish
+4. config nomli proyekt yaratish exam-1 loyihani ichida
+5. git add .gitignore qilish
+6. python manage.py migrate
+
+Loyihaning config sozlamalari
+1. meals va taxi app larini yaratish
+2. config/settings.py da meal va taxi applarini installed_apps ga qo'shish
+3. config/settings.py da templates manzilini BASE_DIR orqali berish
+4. config/settings.py timezone ni 'Asia/Tashkent' ga to'g'irlash
+5. config/urls.py da applarning url larini ko'rsatish
+
+Asosiy kod yozish qismi
+1.templates directory yaratish
+2. templates ni ichida main_page.html meals_management.html va taxi_management.html shablonlarini yaratish
+3. meals/models.py da Meal modelini yaratish maydonlari(meal_name, ingredients(TextField), price, type, cuisine)
+4. meals/admin.py da Meal modelini register qilish list_display orqali maydonlarini ham ko'rsatish
+5. meals/views.py da meals_management nomli funksiya yaratish(vazifasi: userga meals_management.html ni ko'rsatadi,
+userdan ma'lumot qabul qiladi va uni saqlab funksiyada ko'rsatilgan manzilga yo'naltiradi)
+6. meals app da urls.py yaratish va meals/views.py dagi funsksiyaga yo'nalish berish
+7. taxi/models.py da Taxi modelini yaratish maydonlari(taxi_name, licence_plate, driver_name, passanger_capacity,
+ car_model, status)
+8. taxi/admin.py da Taxi modelini register qilish list_display orqali maydonlarini ham ko'rsatish
+9. taxi/views.py da taxi_management nomli funksiya yaratish(vazifasi: userga taxi_management.html ni ko'rsatadi,
+userdan ma'lumot qabul qiladi va uni saqlab funksiyada ko'rsatilgan manzilga yo'naltiradi)
+10. taxi app da urls.py yaratish va taxi/views.py dagi funsksiyaga yo'nalish berish
+11. python manage.py makemigrations va python manage.py migrate buyruqlari orqali modellarni ma'lumotlar bazasiga qoshish
+12. Templates dagi main, meals va taxi management larga html tag yozib user ko'radigan sahifani chiroyliroq chiqarish
