@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Create New Language</title>
+</head>
+<style>
+        .form-box {
+            border: 2px solid Black; /* Chegara ko'k rangda */
+            border-radius: 10px; /* To'rtburchakni yumaloqroq qilish */
+            padding: 20px; /* Ichki bo'shliq */
+            background-color: #f8f9fa; /* Orqa fonni engil kulrang qilish */
+            max-width: 400px; /* Kenglikni cheklash */
+            margin: auto; /* Markazga joylash */
+        }
+        .rounded-input {
+                border-radius: 10px;
+                border: 2px solid Black; /* Chegara bilan ko'rinish uchun */
+                padding: 5px; /* Ichki bo'shliq */
+        }
+        .border-with-text::before {
+                content: "Create new Language"; /* Yozuv */
+                color: SlateBlue;
+                position: absolute;
+                top: 14%;
+                left: 43%;
+                transform: translate(-50%, -50%); /* Markazlashdirish */
+                background-color: #f8f9fa; /* Yozuv fonini oq qilish */
+                padding: 0 10px; /* Yozuvni chizig'dan ajratish */
+                z-index: 1; /* Yozuvni boshqa kontentdan ustun qilish */
+            }
+    </style>
+<body style="background-color:CadetBlue">
+<h1 class="text-center mt-4" style="background-color:Brown;"><strong>Add Language</strong></h1>
+<br>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-box">
+        <div class="mb-3 border-with-text">
+            <span style="color:SlateBlue">Language Name:</span> <input type="text" name="language_name" class="rounded-input">
+        </div>
+        <div class="mb-3">
+            <span style="color:SlateBlue">Description:</span><textarea type="text" name="description" id="" cols="20" rows="2"  class="rounded-input"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-20">Create Language</button>
+        <br><a href="{% url 'programs:prog_list' %}">Back</a>
+    </div>
+</form>
+</body>
+</html>

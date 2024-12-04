@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Student List</title>
+</head>
+<style>
+        table {
+            width: 50%; /* Jadvalning kengligi */
+            margin: 0 auto;
+            border-radius: 20px;
+
+        }
+
+        table, th, td {
+              border: 2px solid Black;
+              border-radius: 10px;
+              border-collapse: separate;
+              background-color: #f8f9fa;
+        }
+
+        th, td {
+            padding: 2px; /* Yozuvlar orasida bo‘shliq */
+            text-align: center; /* Yozuvni chapga joylashtirish */
+            border-style: outset;
+        }
+    </style>
+<body style="background-color:SlateBlue">
+<h1 class="text-center mt-4" style="background-color:Tomato;"><strong>Car List</strong></h1>
+<br>
+<p style="text-align: center; margin:0"><strong>Car List</strong></p>
+<div>
+    <table>
+        <tr>
+            <th>Car Name</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        {% for car in cars %}
+            <tr>
+                <td>{{ car.car_name }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.year }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="container mt-3" style="text-align:center; background-color:LightGray; font-size:160%; width:180px;">
+        <a href="{% url 'cars:add_car' %}">Add New Car</a>
+    </div>
+</div>
+
+</body>
+</html>
